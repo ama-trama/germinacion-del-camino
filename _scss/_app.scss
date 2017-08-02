@@ -25,6 +25,7 @@ header {
 	display: flex;
 	color: #fff;
 	padding: 0 15px;
+	z-index: 1;
 
 	.logo {
 		display: flex;
@@ -78,7 +79,7 @@ header {
 	background-position: top center !important;
 	background-color: #fff;
 	background-repeat: repeat-x !important;
-	height: 100vh;
+	height: auto;
 }
 
 .intro {
@@ -142,5 +143,23 @@ footer {
 
 	p {
 		font-size: 18px;
+	}
+}
+
+.post {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 2em 0;
+}
+
+.guide {
+	background-color: rgba(255,255,255,0.9);
+	.items {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.item {
+		border-bottom: 1px solid #ddd !important;
 	}
 }
