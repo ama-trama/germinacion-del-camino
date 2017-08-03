@@ -29,6 +29,7 @@ header {
 	color: #fff;
 	padding: 0 15px;
 	z-index: 1;
+	border-bottom: 3px solid #25a55f;
 
 	.logo {
 		display: flex;
@@ -107,10 +108,11 @@ header {
 	}
 
 	p {
-		font-size: 19px;
-		font-family: 'Alegreya Sans';
-		line-height: 24px;
+		font-size: 20px;
+		font-family: 'Alegreya';
+		line-height: 26px;
 		padding: 0 2em;
+		text-align: center;
 	}
 
 	.call-to-action {
