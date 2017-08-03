@@ -7,14 +7,9 @@ layout: default
 	<div class="post">
 	<img src="{{ site.baseurl }}/img/{{ page.img }}.jpg" alt="{{ page.title }}" width="100%">
 	<h1>{{page.title}}</h1>
-	<p>{{content}}</p>
+	<i>{{page.nombre-cientifico}}</i> <br>
 	<div>{{page.meta}}</div> <br>
-	<div>{{page.category}}</div> <br>
-	<div>{{page.type}}</div> <br>
-	<div>{{page.nombre-cientifico}}</div> <br>
-	<div>{{page.otros-nombres}}</div> <br>
-	<div>{{page.parte-usada}}</div> <br>
-	<div>{{page.cuidados-especiales}}</div> <br>
+	<p>{{content}}</p>
 	</div>
 </div>
 {% include footer.html %}

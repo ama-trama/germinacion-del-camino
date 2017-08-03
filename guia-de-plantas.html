@@ -3,7 +3,7 @@ layout: app
 ---
 
 <div class="guide">
-	<h1 style="text-align: center; padding-top: 20px;">Guía de plantas</h1>
+	<h1>Guía de plantas</h1>
 	<div class="ui items">
 	{% for plantas in site.plantas %}
 		  <div class="item">
@@ -11,15 +11,9 @@ layout: app
 		      <img src="{{ site.baseurl }}/img/{{ plantas.img }}.jpg" alt="{{ plantas.title }}">
 		    </div>
 		    <div class="content">
-		      <a class="header" href="{{ site.baseurl }}{{ plantas.url }}">{{ plantas.title }}</a>
-		      <div class="meta">
-		        <span>{{plantas.category}}</span>
-		      </div>
+		      <a class="header" href="{{ site.baseurl }}{{ plantas.url }}">{{ plantas.title }} <br> <i>{{plantas.nombre-cientifico}}</i></a>
 		      <div class="description">
 		        <p>{{plantas.meta}}</p>
-		      </div>
-		      <div class="extra">
-		        {{plantas.nombre-cientifico}}
 		      </div>
 		    </div>
 		  </div>
