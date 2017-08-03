@@ -4,6 +4,9 @@
 @import 'plugins/bourbon/bourbon';
 @import 'plugins/neat/neat';
 
+$mobile: new-breakpoint(max-width 500px 4);
+$ipad: new-breakpoint(max-width 1024px 12);
+
 body {
 	font-family: 'Alegreya', serif;
 	margin: 0;
@@ -150,10 +153,25 @@ footer {
 	padding: 2em 0;
 	font-size: 20px;
 	line-height: 30px;
+
+
+	@include media($ipad) {
+	    padding: 2em 1em;
+	}
+
+	h3, h4 {
+		border-bottom: 1px solid #1a7a43;
+		color: #1a7a43;
+		font-family: 'Alegreya SC', serif;
+
+	}
+
+
 }
 
 .guide {
 	background-color: rgba(255,255,255,0.9);
+	padding: 0 1em;
 
 	h1 {
 		padding-top: 20px;
@@ -176,6 +194,7 @@ footer {
 
 		.header {
 			font-size: 22px !important;
+			color: #1a7a43 !important;
 
 			i {
 				color: #999;
