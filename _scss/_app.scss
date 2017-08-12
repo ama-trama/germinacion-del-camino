@@ -30,6 +30,7 @@ header {
 	padding: 0 15px;
 	z-index: 1;
 	border-bottom: 3px solid #25a55f;
+	box-shadow: 0 8px 17px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.2);
 
 	.logo {
 		display: flex;
@@ -44,6 +45,10 @@ header {
 	    small {
 	    	font-size: 20px;
 	    	padding: 0 10px;
+
+	    	@include media($ipad) {
+				display: none;
+	    	}
 	    }
 	}
 
@@ -61,6 +66,15 @@ header {
 			text-decoration: none;
 			font-family: 'Alegreya SC', serif;
 			font-size: 20px;
+			-webkit-transition: all 0.88s cubic-bezier(0.7, 0, 0.3, 1);
+			-moz-transition: all 0.88s cubic-bezier(0.7, 0, 0.3, 1);
+			transition: all 0.88s cubic-bezier(0.7, 0, 0.3, 1);
+
+	    	@include media($mobile) {
+				font-size: 16px;
+				text-align: center;
+				line-height: 15px;
+	    	}
 
 			&:hover {
 				color: #fff;
@@ -97,6 +111,10 @@ header {
 	    font-size: 50px;
 	    text-align: center;
         margin: 0;
+
+    	@include media($mobile) {
+			font-size: 30px;
+    	}
 	}
 
 	h4 {
@@ -136,7 +154,7 @@ footer {
 	max-width: 600px;
 	margin: 0 auto;
 	text-align: center;
-	padding-top: 25px;
+	padding: 150px 1em 0 ;
 	
 
 
@@ -212,4 +230,100 @@ footer {
 	} 
 
 
+}
+
+.search-form {
+	display: block;
+	width: 100%;
+	padding: 70px 1em;
+	background: url(img/back-search.jpg);
+	background-position: top center !important;
+	background-color: #333;
+	background-repeat: repeat-x !important;
+	-webkit-transition: all 0.88s cubic-bezier(0.7, 0, 0.3, 1);
+	-moz-transition: all 0.88s cubic-bezier(0.7, 0, 0.3, 1);
+	transition: all 0.88s cubic-bezier(0.7, 0, 0.3, 1);
+
+	@include media($mobile) {
+		padding: 30px 1em;
+	}
+	
+	label {
+		text-align: center;
+		display: block;
+		width: 100%;
+		margin: 0 0 20px 0;
+		font-size: 25px;
+		color: #fff;
+
+    	@include media($mobile) {
+			margin: 20px 0;
+			font-size: 20px;
+    	}
+	}
+
+
+	form {
+		max-width: 700px;
+		display: flex;
+		margin: 0 auto;
+
+    	@include media($mobile) {
+			flex-direction: column;
+    	}
+
+	}
+
+	.search-box {
+		margin-right: 15px;
+		flex: 1;
+		border: none;
+		padding: 10px 10px 10px 20px;
+		border-bottom: 1px solid #ddd;
+		font-size: 20px;
+
+    	@include media($mobile) {
+			margin: 0;
+			padding: 10px;
+			text-align: center;
+    	}
+
+	}
+
+	.search-action {
+		font-size: 15px;
+	    padding: 0 45px;
+	    background: #1a7a43 !important;
+
+    	@include media($mobile) {
+			padding: 10px 45px;
+			margin: 20px 0;
+    	}
+	}
+}
+
+.search-results {
+	li {
+
+	}
+
+	.image {
+		img {
+			width: 100%;
+		}
+	}
+
+	.content {
+
+	}
+
+
+}
+
+.no-result {
+	width: 100%;
+	padding: 50px 0;
+	text-align: center;
+	font-size: 25px;
+	color: #999;
 }
