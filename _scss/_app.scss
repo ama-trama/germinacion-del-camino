@@ -303,11 +303,15 @@ footer {
 }
 
 .search-results {
+	padding: 0 15px;
+	
 	li {
 
 	}
 
 	.image {
+		max-height: auto !important;
+
 		img {
 			width: 100%;
 		}
